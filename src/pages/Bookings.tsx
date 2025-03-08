@@ -1,4 +1,4 @@
-/*import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Container,
   Typography,
@@ -23,7 +23,7 @@ import {
 import { bookingService, hotelService } from '../services/api';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider, DatePicker } from '@mui/x-date-pickers';
-//import fr from 'date-fns/locale/fr';
+// import fr from 'date-fns/locale/fr';
 
 interface Booking {
   id: number;
@@ -184,21 +184,21 @@ const Bookings: React.FC = () => {
         <DialogTitle>Réserver {selectedHotel?.name}</DialogTitle>
         <DialogContent>
           <LocalizationProvider dateAdapter={AdapterDateFns} 
-          //adapterLocale={fr}
+          // adapterLocale={fr}
           >
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2 }}>
-              <DatePicker
+              {/* <DatePicker
                 label="Date d'arrivée"
                 value={bookingData.checkIn}
                 onChange={(newValue) => setBookingData({ ...bookingData, checkIn: newValue })}
-                //renderInput={(params) => <TextField {...params} fullWidth />}
-              />
-              <DatePicker
+                renderInput={(params) => <TextField {...params} fullWidth />}
+              />*/}
+             {/*  <DatePicker
                 label="Date de départ"
                 value={bookingData.checkOut}
                 onChange={(newValue) => setBookingData({ ...bookingData, checkOut: newValue })}
-               // renderInput={(params) => <TextField {...params} fullWidth />}
-              />
+                renderInput={(params) => <TextField {...params} fullWidth />}
+              />*/}
               <TextField
                 label="Nombre de personnes"
                 type="number"
@@ -220,4 +220,4 @@ const Bookings: React.FC = () => {
   );
 };
 
-export default Bookings; */
+export default Bookings;

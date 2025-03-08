@@ -20,7 +20,7 @@ api.interceptors.request.use((config) => {
 
 export const authService = {
   login: async (email: string, password: string) => {
-    const response = await api.post('api/auth/login', { email, password });
+    const response = await api.post('/auth/login', { email, password });
     if (response.data.token) {
       localStorage.setItem('token', response.data.token);
     }
@@ -34,6 +34,7 @@ export const authService = {
     password: string;
   }) => {
     const response = await api.post('/auth/register', userData);
+    console.log(response.data);
     return response.data;
   },
 
@@ -44,7 +45,7 @@ export const authService = {
 
 export const hotelService = {
   getAllHotels: async () => {
-    const response = await api.get('/hotels');
+    const response = await api.get('/hotels/public');
     return response.data;
   },
 
