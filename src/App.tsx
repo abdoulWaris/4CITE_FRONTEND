@@ -8,7 +8,7 @@ import Hotels from './pages/Hotels';
 import Login from './pages/Login';
 import Register from './pages/Register';
 //import Bookings from './pages/Bookings';
-import ProtectedRoute from './components/ProtectedRoute';
+//import ProtectedRoute from './components/ProtectedRoute';
 
 const theme = createTheme({
   palette: {
