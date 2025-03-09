@@ -5,6 +5,17 @@ describe('Akkord App e2e testing', () => {
      //cy.visit('http://10.1.0.183:3000');
     });
 
+    it('should verify all the links', () => {
+      cy.contains('Accueil').click();
+      cy.url().should('include', '/');
+      cy.contains('Hôtels').click();
+      cy.url().should('include', '/hotels');
+      cy.contains('Connexion').click();
+      cy.url().should('include', '/login');
+      cy.contains('Inscription').click();
+      cy.url().should('include', '/register');
+    });
+
     it('shoul click on home button', () => {
       cy.contains('Accueil').click();
       cy.url().should('include', '/');
