@@ -1,4 +1,4 @@
-name: CI
+name: akkord e2e
 
 on:
   push:
@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -47,4 +47,4 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           build: npm run build
-          start: npm star
+          start: npm start
