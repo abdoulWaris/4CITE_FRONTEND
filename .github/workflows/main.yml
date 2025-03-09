@@ -22,7 +22,7 @@ jobs:
           node-version: '16'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build the application
         run: npm run build
@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -43,8 +43,8 @@ jobs:
       - name: Install dependencies
         run: npm install
         
-      - name: Run Application
-        run: npm start
-        
-      - name: Run Cypress tests
-        run: npm run cypress:run
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm run build
+          start: npm star
