@@ -41,7 +41,7 @@ jobs:
           node-version: '16'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
         
       - name: Cypress run
         uses: cypress-io/github-action@v6
@@ -51,7 +51,8 @@ jobs:
           
   deploy:
       runs-on: ubuntu-latest
-
+      needs: test
+      
       steps:
         - name: checkout repository
           uses: actions/checkout@2
