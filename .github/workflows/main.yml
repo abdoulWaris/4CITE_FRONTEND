@@ -55,7 +55,7 @@ jobs:
       
       steps:
         - name: checkout repository
-          uses: actions/checkout@2
+          uses: actions/checkout@v2
           
         - name: Deploy the Solution
           run: echo "The solution is now available, thanks!!!"
