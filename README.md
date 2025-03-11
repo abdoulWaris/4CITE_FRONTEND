@@ -1,6 +1,6 @@
 # 4CITE_FRONTEND
 
-LE front-end de l'application akkordHotel avec des tests Cypress e2e frontend test
+LE front-end de l'application akkordHotel avec des tests Cypress e2e frontend test avec pipeline CI/CD.Ce dépôt contient uniquement le code du backend.
 
 ## Prerequisites
  **Langage**:
